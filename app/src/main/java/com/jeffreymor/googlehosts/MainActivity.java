@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.jeffreymor.googlehosts.util.CheckUtil;
 import com.jeffreymor.googlehosts.util.CloseUtil;
 import com.jeffreymor.googlehosts.util.DownloadUtil;
+import com.jeffreymor.googlehosts.util.PreferencesTool;
 import com.stericson.RootShell.RootShell;
 import com.stericson.RootTools.RootTools;
 
@@ -191,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
     private void initSubTitle() {
         if (HostsService.isAutoOn(getContext())) {
             getSupportActionBar().setSubtitle(getString(R.string.auto_update_subtitle, "On"));
-            ;
+
         } else {
             getSupportActionBar().setSubtitle(getString(R.string.auto_update_subtitle, "Off"));
             PreferencesTool.setAutoUpdateInterval(this, "0"); //特殊原因导致设置为有自动更新但是没有alarm任务存在，重置更新为关闭状态

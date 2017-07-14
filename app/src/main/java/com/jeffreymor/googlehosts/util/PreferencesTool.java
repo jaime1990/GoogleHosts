@@ -1,4 +1,4 @@
-package com.jeffreymor.googlehosts;
+package com.jeffreymor.googlehosts.util;
 
 import android.content.Context;
 import android.preference.PreferenceManager;
@@ -19,8 +19,8 @@ public class PreferencesTool {
 
     public static int getAutoUpdateInterval(Context context) {
 
-        int interval = Integer.parseInt(PreferenceManager.getDefaultSharedPreferences(context)
+        return Integer.parseInt(PreferenceManager.getDefaultSharedPreferences(context)
                 .getString(PREF_AUTO_UPDATE_INTERVAL, "0"));  //注意：因为listpreference以String键值对存储，必须转换
-        return interval;
+
     }
 }

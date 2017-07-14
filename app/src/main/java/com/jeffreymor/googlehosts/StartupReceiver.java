@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
+import com.jeffreymor.googlehosts.util.PreferencesTool;
+
 /**
  * Created by Mo on 2016/10/15/015.
  */
@@ -16,7 +18,6 @@ public class StartupReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         Log.i(TAG, "Received broadcast intent: " + intent.getAction());
-
         int interval = PreferencesTool.getAutoUpdateInterval(context);
         HostsService.setAutoUpdateHosts(context, interval);
 

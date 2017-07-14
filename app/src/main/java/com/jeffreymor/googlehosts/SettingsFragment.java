@@ -8,11 +8,10 @@ import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
-import android.support.annotation.StringDef;
 
 import com.stericson.RootShell.RootShell;
 
-import static com.jeffreymor.googlehosts.PreferencesTool.PREF_AUTO_UPDATE_INTERVAL;
+import static com.jeffreymor.googlehosts.util.PreferencesTool.PREF_AUTO_UPDATE_INTERVAL;
 
 /**
  * Created by Mor on 2017/7/10.

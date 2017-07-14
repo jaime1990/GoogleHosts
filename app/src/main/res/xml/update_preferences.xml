@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/settings">
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/update_time_entry_list"
+            android:entryValues="@array/update_time_value_list"
+            android:key="autoUpdateInterval"
+            android:title="@string/auto_update_interval"/>
+
+        <com.jeffreymor.googlehosts.AboutDialogPreference
+            android:dialogTitle="@string/about"
+            android:title="@string/about"/>
+
+    </PreferenceCategory>
+</PreferenceScreen>
+

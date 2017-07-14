@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">GoogleHosts</string>
+
+    <string name="get_last_host">Update Hosts</string>
+    <string name="eset_host">Reset Hosts</string>
+    <string name="read_host">Check Hosts</string>
+    <string name="about">About</string>
+    <string name="get_root_fail">Failed to access root!</string>
+    <string name="network_error">Network error! Please try agian later.</string>
+
+    <string name="app_github">
+        <![CDATA[
+        <p>Hosts Open Source Project:
+        <a href="https://github.com/racaljk/hosts">github.com/racaljk/hosts</a></p>
+        <p>GoogleHosts App Open Source Project:
+         <a href="https://github.com/jeffreymor">github.com/jeffreymor</a></p>
+         ]]>
+    </string>
+
+    <string name="your_mobile_have_no_root">Your phone is unroot. Please root your phone and try again.</string>
+    <string name="reset_host_tips">Reset hosts success! Please reboot to enable it.</string>
+    <string name="get_last_hosts_tips">Update hosts success! Please reboot to enable it.</string>
+    <string name="loading">loading...</string>
+    <string name="settings">Settings</string>
+    <string name="no_update_time"># Last updated: null</string>
+    <string name="auto_update_subtitle">Auto Update: %S</string>
+    <string name="systemless_hosts_not_exists">Magisk systemless hosts is not enabled! Please enable it and try again.</string>
+    <string name="auto_update_interval">Auto Update Interval</string>
+
+    <string-array name="update_time_entry_list">
+        <item>Off</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>12 hours</item>
+    </string-array>
+
+    <string-array name="update_time_value_list">
+        <item>0</item>
+        <item>3</item>
+        <item>6</item>
+        <item>12</item>
+    </string-array>
+</resources>

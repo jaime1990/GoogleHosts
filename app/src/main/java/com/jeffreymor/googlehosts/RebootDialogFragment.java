@@ -9,6 +9,8 @@ import android.support.v4.app.DialogFragment;
 import android.widget.Toast;
 
 import com.stericson.RootShell.RootShell;
+import com.stericson.RootShell.execution.Command;
+import com.stericson.RootShell.execution.Shell;
 import com.stericson.RootTools.RootTools;
 
 /**
@@ -28,7 +30,8 @@ public class RebootDialogFragment extends DialogFragment implements DialogInterf
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        AlertDialog  dialog = new AlertDialog.Builder(getContext())
+
+        return new AlertDialog.Builder(getContext())
                 .setTitle("Warning")
                 .setMessage("Are you sure to reboot?")
                 .setPositiveButton("Yes", this)
@@ -36,8 +39,6 @@ public class RebootDialogFragment extends DialogFragment implements DialogInterf
                 .setCancelable(true)
                 .setOnDismissListener(this)
                 .create();
-
-        return dialog;
     }
 
     @Override
@@ -47,8 +48,8 @@ public class RebootDialogFragment extends DialogFragment implements DialogInterf
                 break;
             case DialogInterface.BUTTON_POSITIVE:
                 try {
-                    RootShell.getShell(true);
-                    RootTools.restartAndroid();
+                    Shell shell = RootShell.getShell(true);
+                    RootTools.runShellCommand(shell, new Command(0, "reboot"));
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

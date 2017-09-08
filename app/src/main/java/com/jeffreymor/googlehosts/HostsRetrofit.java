@@ -9,6 +9,7 @@ import retrofit2.http.GET;
  */
 
 public interface HostsRetrofit {
+
     @GET("googlehosts/hosts/master/hosts-files/hosts")
     Call<ResponseBody> getHosts();
 }

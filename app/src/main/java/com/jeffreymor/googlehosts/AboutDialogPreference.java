@@ -53,8 +53,8 @@ public class AboutDialogPreference extends DialogPreference {
         Button nButton = dialog.getButton(AlertDialog.BUTTON_NEGATIVE);
         nButton.setClickable(false);
         nButton.setVisibility(View.GONE);
-        TextView view = (TextView) dialog.findViewById(android.R.id.message);
-        view.setMovementMethod(LinkMovementMethod.getInstance());
+        TextView view = (TextView) dialog.findViewById(android.R.id.message);//找到dialog中唯一一个textview，在普通dialog中textview的id为android.R.id.message
+        view.setMovementMethod(LinkMovementMethod.getInstance());//设置超链接点击
 
 
     }

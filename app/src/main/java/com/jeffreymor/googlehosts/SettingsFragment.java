@@ -26,7 +26,7 @@ public class SettingsFragment extends PreferenceFragment implements SharedPrefer
         mContext = getContext();
         boolean isMobileRoot = RootShell.isRootAvailable();
 
-        addPreferencesFromResource(R.xml.update_preferences);
+        addPreferencesFromResource(R.xml.settings);
 
         mListPreference = (ListPreference) findPreference(PREF_AUTO_UPDATE_INTERVAL);
 
@@ -37,6 +37,8 @@ public class SettingsFragment extends PreferenceFragment implements SharedPrefer
         sharedPreferences.registerOnSharedPreferenceChangeListener(this);
         setSummary(sharedPreferences.getString(PREF_AUTO_UPDATE_INTERVAL, "关闭"));
         mListPreference.setOnPreferenceChangeListener(this);
+
+
     }
 
     private void setSummary(String value) {

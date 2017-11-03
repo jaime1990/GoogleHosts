@@ -1,9 +1,3 @@
-# Files for the Dalvik VM
-*.dex
-
-# Java class files
-*.class
-
 # Generated files
 bin/
 gen/
@@ -29,10 +23,11 @@ proguard/
 captures/
 
 # Intellij
+/.idea/
 *.iml
 
 # Keystore files
 *.jks
 
 
-/.idea/copyright/
+

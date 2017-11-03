@@ -19,9 +19,7 @@ import com.stericson.RootTools.RootTools;
 
 public class RebootDialogFragment extends DialogFragment implements DialogInterface.OnClickListener, DialogInterface.OnCancelListener {
     public static RebootDialogFragment newInstance() {
-        
         Bundle args = new Bundle();
-        
         RebootDialogFragment fragment = new RebootDialogFragment();
         fragment.setArguments(args);
         return fragment;
@@ -30,7 +28,6 @@ public class RebootDialogFragment extends DialogFragment implements DialogInterf
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-
         return new AlertDialog.Builder(getContext())
                 .setTitle("Warning")
                 .setMessage("Are you sure to reboot?")

@@ -19,6 +19,7 @@ import com.stericson.RootTools.RootTools;
 
 public class RebootDialogFragment extends DialogFragment implements DialogInterface.OnClickListener, DialogInterface.OnCancelListener {
     public static RebootDialogFragment newInstance() {
+
         Bundle args = new Bundle();
         RebootDialogFragment fragment = new RebootDialogFragment();
         fragment.setArguments(args);
